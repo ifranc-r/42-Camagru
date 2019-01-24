@@ -75,9 +75,22 @@ Class Factory {
 			echo $search_sql . "<br>" . $e->getMessage();
 		}
 	}
+	public function last_id(){
+		try{
+			$last_id = $this->_PDO->lastInsertId();
+			// print_r($last_id);
+			echo "Last id has ben send";
+			return $last_id;
+		}
+		catch(PDOException $e)
+		{
+			echo $search_sql . "<br>" . $e->getMessage();
+		}
+	}
 }
 
-$fact_obj_users = new Factory("users");
+// $fact_obj_users = new Factory("selfies");
+// $fact_obj_users->last_id();
 // $fact_obj_users->create("login,password,admin", "'tuto', 'popi', 1");
 // $fact_obj_users->modif("password='prout',admin=1", "login='titi'");
 // $fact_obj_users->del("login='tuto'");

@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS camagru.users (
 	-- last_name varchar(60) NOT NULL,
 	-- email varchar(60) NOT NULL,
 	login varchar(60) NOT NULL UNIQUE,
-	password varchar(64) NOT NULL,
+	password varchar(128) NOT NULL,
 	-- date_creation DATETIME DEFAULT CURRENT_TIMESTAMP,
 	-- date_modif DATETIME DEFAULT NULL,
 	admin bit(1) DEFAULT 0,
@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS camagru.users (
 CREATE TABLE IF NOT EXISTS camagru.selfies (
 	id_selfie int unsigned NOT NULL AUTO_INCREMENT,
 	id_user int unsigned NOT NULL,
-	picture int unsigned NOT NULL,
+	img_data BLOB NOT NULL,
 	-- date_creation DATETIME DEFAULT CURRENT_TIMESTAMP,
 	-- date_modif DATETIME DEFAULT NULL,
 	PRIMARY KEY (`id_selfie`),

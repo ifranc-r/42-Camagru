@@ -1,0 +1,11 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.copyright {
+	margin-right: 10px;
+	font-style: italic;
+	font-family: monospace;
+	text-align: right;
+}
